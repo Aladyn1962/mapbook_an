@@ -4,15 +4,12 @@ users: list = [
 ]
 print(users)
 
+def remove_user(users_data: list)->None:
 
-def add_user(users_data: list) -> None;
+    user_name=input('podaj imie urzytkownika do usunięcia: ')
+    for user in users_data:
+        if user["name"] == user_name:
+            users_data.remove(user)
 
-
-user_name = input('podaj imię nowego urzytkownika: ')
-user_location = input('podaj lokalizację nowego znajomego: ')
-user_posts = int(input('podaj liczbę postów: '))
-users_data.append({"name": user_name, "location": user_location, "posts": user_posts})
-
-add_user(users)
-
+remove_user(users)
 print(users)
