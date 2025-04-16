@@ -1,4 +1,18 @@
-from utils .model import users
+
+from utils.model import users
 from utils.controller import get_user_info
 
-get_user_info(users)
+
+def main():
+    while True:
+
+        print('=============MENU===============')
+        print('0 - zakończ program')
+        print('1 - poka co u znajomych')
+        print('===================================')
+        choice = input('wybierz opcję menu: ')
+        if choice == '0': break
+        if choice == '1': get_user_info(users)
+
+if __name__ == "__main__":
+    main()
